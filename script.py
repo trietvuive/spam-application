@@ -61,7 +61,6 @@ def main():
 
         print(f"Index #{index} of {len(students)}\t", name, email, "success" if result else "already registered")
         index += 1
-,
     print("Success: {}, Already registered: {}".format(success_count, fail_count))
     end = time.time()
     print(f"Time {round(end - start, 2)}, processed {len(students)} students")
