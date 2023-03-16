@@ -8,6 +8,7 @@ import chardet
 # define your url and amount of time requires to process registration
 URL = 'https://vinuni.my.site.com/s/login/SelfRegister'
 TIMEOUT = 2
+CSV_FILE = 'data/students.txt'
 
 def wait_for_element(driver, element_id : str):
     while len(driver.find_elements(By.ID, element_id)) == 0:
@@ -45,7 +46,7 @@ def read_students_list(file : str):
 
 def main():
     start = time.time()
-    students = read_students_list('data/students.txt')
+    students = read_students_list(CSV_FILE)
     driver = webdriver.Firefox()
     driver.get(URL)
     fail_count = success_count = 0
