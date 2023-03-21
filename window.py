@@ -15,7 +15,7 @@ class Window(tk.Tk):
         self.automator = RegistrationAutomation()
         self.loop = loop
         self.root = tk.Tk()
-        self.root.title = "Thùy Chi App :>"
+        self.root.title("Thùy Chi App :>")
         self.animation = "░▒▒▒▒"
         self.label = tk.Label(text="")
         self.label.grid(row=0, columnspan=2, padx=(8, 8), pady=(16, 0))
